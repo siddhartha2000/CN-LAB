@@ -5,22 +5,6 @@
 char g[]="10001000000100001",p[50],c[50];
 int n1,n2;
 
-void xor()
-{
-	int i;
-	for(i=0;i<n1;i++)
-	{
-		if(c[i]==g[i])
-		{
-			c[i]='0';
-		}
-		else
-		{
-			c[i]='1';
-		}
-	}
-}
-
 void crc()
 {
 	int i,cnr;
@@ -41,6 +25,24 @@ void crc()
 		 c[i]=p[cnr++];
 	 }while(cnr<n2+n1);
  }
+
+void xor()
+{
+	int i;
+	for(i=0;i<n1;i++)
+	{
+		if(c[i]==g[i])
+		{
+			c[i]='0';
+		}
+		else
+		{
+			c[i]='1';
+		}
+	}
+}
+
+
 
 void main()
 {
